@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Brain Hello Kitty Quiz</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <!-- =========================
+         START PAGE
+    ========================== -->
+
+    <section
+        id="start-page"
+        class="page active"
+    >
+
+        <div class="start-card">
+
+            <!-- Mascot -->
+            <div class="kitty">
+
+                <div class="ear ear-left"></div>
+                <div class="ear ear-right"></div>
+
+                <div class="kitty-face">
+
+                    <div class="eye eye-left"></div>
+                    <div class="eye eye-right"></div>
+
+                    <div class="nose"></div>
+
+                    <div class="whisker w-left-1"></div>
+                    <div class="whisker w-left-2"></div>
+
+                    <div class="whisker w-right-1"></div>
+                    <div class="whisker w-right-2"></div>
+
+                    <div class="bow">
+                        <span></span>
+                        <b></b>
+                        <span></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <p class="mini-text">
+                WELCOME TO
+            </p>
+
+
+            <h1>
+                BRAIN
+                <span>DAMAGE</span>
+            </h1>
+
+
+            <p class="subtitle">
+                Random • Math • Logic • History
+                <br>
+                Mythology • Biology • Psychology
+            </p>
+
+
+            <!-- Nama pemain -->
+
+            <input
+                type="text"
+                id="name-input"
+                placeholder="Enter your name..."
+                maxlength="20"
+            >
+
+
+            <!-- Tombol mulai -->
+
+            <button
+                id="start-btn"
+                class="main-btn"
+            >
+                START QUIZ
+            </button>
+
+
+            <p class="question-total">
+                55 RANDOM QUESTIONS
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         QUIZ PAGE
+    ========================== -->
+
+    <section
+        id="quiz-page"
+        class="page"
+    >
+
+        <div class="quiz-container">
+
+
+            <!-- Nama + nomor soal -->
+
+            <div class="quiz-top">
+
+                <div>
+
+                    <p class="small-label">
+                        PLAYER
+                    </p>
+
+                    <h3 id="player-name">
+                        Player
+                    </h3>
+
+                </div>
+
+
+                <div class="counter">
+
+                    <span id="question-number">
+                        1
+                    </span>
+
+                    /
+
+                    <span id="total-question">
+                        55
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Progress bar -->
+
+            <div class="progress-area">
+
+                <div class="progress-bar">
+
+                    <div id="progress"></div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Mascot -->
+
+            <div class="mascot-area">
+
+                <div class="kitty small">
+
+                    <div class="ear ear-left"></div>
+                    <div class="ear ear-right"></div>
+
+                    <div class="kitty-face">
+
+                        <div class="eye eye-left"></div>
+                        <div class="eye eye-right"></div>
+
+                        <div class="nose"></div>
+
+                        <div class="whisker w-left-1"></div>
+                        <div class="whisker w-left-2"></div>
+
+                        <div class="whisker w-right-1"></div>
+                        <div class="whisker w-right-2"></div>
+
+                        <div class="bow">
+                            <span></span>
+                            <b></b>
+                            <span></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <p id="cheer-text">
+                    You can do it! ♡
+                </p>
+
+            </div>
+
+
+
+            <!-- Timer -->
+
+            <div class="timer-box">
+
+                <span>
+                    TIME
+                </span>
+
+                <strong id="timer">
+                    15
+                </strong>
+
+            </div>
+
+
+
+            <!-- Pertanyaan -->
+
+            <div class="question-card">
+
+                <p
+                    id="category"
+                    class="category"
+                >
+                    🧠 LOGIC
+                </p>
+
+
+                <h2 id="question">
+                    Question goes here
+                </h2>
+
+            </div>
+
+
+
+            <!-- Jawaban -->
+
+            <div
+                id="answers"
+                class="answers"
+            >
+
+                <button
+                    class="answer-btn"
+                    data-index="0"
+                >
+
+                    <span class="answer-letter">
+                        A
+                    </span>
+
+                    <span class="answer-text">
+                        Answer A
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="answer-btn"
+                    data-index="1"
+                >
+
+                    <span class="answer-letter">
+                        B
+                    </span>
+
+                    <span class="answer-text">
+                        Answer B
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="answer-btn"
+                    data-index="2"
+                >
+
+                    <span class="answer-letter">
+                        C
+                    </span>
+
+                    <span class="answer-text">
+                        Answer C
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="answer-btn"
+                    data-index="3"
+                >
+
+                    <span class="answer-letter">
+                        D
+                    </span>
+
+                    <span class="answer-text">
+                        Answer D
+                    </span>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- Feedback -->
+
+            <div
+                id="feedback"
+                class="feedback"
+            ></div>
+
+
+
+            <!-- Tombol next -->
+
+            <button
+                id="next-btn"
+                class="next-btn"
+            >
+                NEXT →
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         RESULT PAGE
+    ========================== -->
+
+    <section
+        id="result-page"
+        class="page"
+    >
+
+        <div class="result-card">
+
+
+            <!-- Mascot -->
+
+            <div class="kitty">
+
+                <div class="ear ear-left"></div>
+                <div class="ear ear-right"></div>
+
+                <div class="kitty-face">
+
+                    <div class="eye eye-left"></div>
+                    <div class="eye eye-right"></div>
+
+                    <div class="nose"></div>
+
+                    <div class="whisker w-left-1"></div>
+                    <div class="whisker w-left-2"></div>
+
+                    <div class="whisker w-right-1"></div>
+                    <div class="whisker w-right-2"></div>
+
+                    <div class="bow">
+                        <span></span>
+                        <b></b>
+                        <span></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <p class="mini-text">
+                QUIZ COMPLETE
+            </p>
+
+
+            <h1 id="result-title">
+                ABSOLUTE GENIUS
+            </h1>
+
+
+            <p id="result-player">
+                Well done, Player!
+            </p>
+
+
+            <!-- Score -->
+
+            <div class="score-circle">
+
+                <span id="score">
+                    0
+                </span>
+
+                <small>
+                    / 55
+                </small>
+
+            </div>
+
+
+            <h2 id="result-message">
+                Your brain survived.
+            </h2>
+
+
+            <button
+                id="restart-btn"
+                class="main-btn"
+            >
+                PLAY AGAIN
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
