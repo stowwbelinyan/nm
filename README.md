@@ -1,2 +1,1 @@
-# Brain-Hello-Kitty-Quiz
-sweet quiz🍓
+# black-out
